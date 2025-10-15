@@ -1,12 +1,6 @@
-require("./read");
-require("./write");
-
+require("./index");
+require("colors");
 const express = require("express");
-
 const app = express();
 
-const PORT = 3000;
-
-app.listen(PORT, () => {
-  console.log(`Server running on http://localhost:${PORT}`);
-});
+app.listen(8082, () => console.log("Node.js running on port 8082".bgBlue));
