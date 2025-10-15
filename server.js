@@ -1,5 +1,4 @@
 require("./read");
-require("./write");
 
 const express = require("express");
 
