@@ -1,12 +1,14 @@
 const { PKCS11 } = require("pkcs11js");
 const pkcs11 = new PKCS11();
-const dllPath = "./etpkcs11/opensc_pkcs11.dll";
+const dllPath = "./64/opensc_pkcs11.dll";
 
 pkcs11.load(dllPath);
 
 try {
   pkcs11.C_Initialize({ flags: PKCS11.CKF_OS_LOCKING_OK });
   console.log("PKCS#11 initialized successfully");
+
+  console.log(pkcs11.C_GetInfo());
 
   const slots = pkcs11.C_GetSlotList(true);
   console.log("Available slots:", slots);
