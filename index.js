@@ -1,6 +1,6 @@
 const { PKCS11 } = require("pkcs11js");
 const pkcs11 = new PKCS11();
-const dllPath = "./64/opensc_pkcs11.dll";
+const dllPath = "./32/opensc_pkcs11.dll";
 
 pkcs11.load(dllPath);
 
